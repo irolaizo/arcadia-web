@@ -25,10 +25,10 @@
         <li><a href="#como-funciona">Cómo funciona</a></li>
         <li><a href="#proyectos">Proyectos</a></li>
         <li><a href="#quien">Quién está detrás</a></li>
-        <li><a href="#colabora">Colabora</a></li>
+        <li><a href="#preguntas">Preguntas</a></li>
       </ul>
     </nav>
-    <a class="btn btn-small" href="#apuntate">Apúntate</a>
+    <a class="btn btn-small" href="#colabora">Colabora</a>
   </header>
 
   <main id="contenido">
@@ -38,7 +38,7 @@
         <h1>Entra a jugar. Quédate a crear.</h1>
         <p class="lede">Espacios gratuitos en Bizkaia donde el acceso a los videojuegos se gana haciendo deporte, colaborando y enseñando a otros. Para jóvenes de 16 a 30 años.</p>
         <div class="actions">
-          <a class="btn" href="#apuntate">Apúntate al próximo pop-up</a>
+          <a class="btn" href="#como-funciona">Descubre cómo funciona</a>
           <a class="btn btn-ghost" href="#colabora">Colabora con ARCADIA</a>
         </div>
         <p class="free">Aquí nadie paga. Ni entrada, ni equipos, ni partidas.</p>
@@ -60,7 +60,7 @@
           <span class="xp-num"><b id="xp">0</b>/100 XP</span>
         </div>
         <div class="unlock" id="unlock" hidden>
-          <strong>Consolas desbloqueadas.</strong> Así funciona cada tarde de ARCADIA.
+          <strong>Consolas desbloqueadas.</strong> Así funciona ARCADIA.
         </div>
       </div>
     </section>
@@ -89,43 +89,13 @@
       </ol>
     </section>
 
-    <!-- UNA TARDE -->
-    <section class="section afternoon" id="pop-up">
-      <h2>Así es una tarde de pop-up</h2>
-      <p class="sub">Cuatro horas en un Gazteleku de Bizkaia.</p>
-      <ol class="timeline">
-        <li>
-          <span class="time">45 min</span>
-          <div>
-            <h3>El peaje</h3>
-            <p>Las consolas están bloqueadas. Para conseguir tu primer sello eliges entre un reto físico, como Just Dance o un circuito de reflejos, o un taller exprés de código o ciberseguridad.</p>
-          </div>
-        </li>
-        <li>
-          <span class="time">3 h</span>
-          <div>
-            <h3>El desbloqueo</h3>
-            <p>Con el sello entras a la zona de juego: torneos de Smash Bros, Brawl Stars o FIFA.</p>
-          </div>
-        </li>
-        <li>
-          <span class="time">Bonus</span>
-          <div>
-            <h3>El multiplicador</h3>
-            <p>Si organizas los emparejamientos o enseñas a alguien a pasarse un nivel, consigues trato VIP: eliges el siguiente juego, te saltas la cola o te llevas un snack.</p>
-          </div>
-        </li>
-      </ol>
-      <p class="bring">Trae tu móvil o portátil si quieres. El resto lo ponemos nosotros.</p>
-    </section>
-
     <!-- PROYECTOS -->
     <section class="section" id="proyectos">
       <h2>Proyectos</h2>
       <div class="projects">
         <article class="project">
           <h3>Pop-up ARCADIA</h3>
-          <p>Una tarde gratuita en un Gazteleku: primero un reto físico o un taller, después torneos.</p>
+          <p>Eventos gratuitos de un día en espacios juveniles de Bizkaia para probar el modelo: primero un reto físico o un taller, después torneos.</p>
           <p class="for">Para jóvenes de 16 a 30 años</p>
         </article>
         <article class="project">
@@ -178,82 +148,27 @@
           <dd>Visibilidad directa ante la Generación Z en un entorno sano.</dd>
         </div>
       </dl>
-      <a class="btn btn-light" href="#apuntate" data-tipo="colaborar">Hablemos</a>
     </section>
 
-    <!-- APÚNTATE + FAQ -->
-    <section class="section signup" id="apuntate">
-      <div class="signup-form">
-        <h2>Apúntate al próximo pop-up</h2>
-        <p class="sub">Será en un Gazteleku de Bizkaia. Lugar y fecha por confirmar: te avisamos por email en cuanto los tengamos.</p>
-
-        <form id="form" novalidate>
-          <fieldset class="tipo">
-            <legend>Quiero</legend>
-            <label><input type="radio" name="tipo" value="joven" checked> Venir a jugar</label>
-            <label><input type="radio" name="tipo" value="colaborar"> Colaborar como entidad o empresa</label>
-          </fieldset>
-
-          <div class="field">
-            <label for="nombre">Nombre</label>
-            <input id="nombre" name="nombre" autocomplete="name" required>
-          </div>
-
-          <div class="field" data-only="joven">
-            <label for="edad">Edad</label>
-            <input id="edad" name="edad" type="number" inputmode="numeric" min="16" max="30" required>
-          </div>
-
-          <div class="field" data-only="colaborar" hidden>
-            <label for="entidad">Entidad o empresa</label>
-            <input id="entidad" name="entidad" autocomplete="organization">
-          </div>
-
-          <div class="field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" autocomplete="email" required>
-          </div>
-
-          <div class="field" id="tutor-field" hidden>
-            <label for="tutor">Contacto de tu madre, padre o tutor</label>
-            <input id="tutor" name="tutor" placeholder="Email o teléfono">
-            <p class="help">Si tienes 16 o 17 años necesitamos una autorización firmada por tu familia.</p>
-          </div>
-
-          <div class="field" data-only="colaborar" hidden>
-            <label for="mensaje">¿Cómo te gustaría colaborar?</label>
-            <textarea id="mensaje" name="mensaje" rows="3"></textarea>
-          </div>
-
-          <label class="check">
-            <input type="checkbox" name="privacidad" required>
-            <span>Acepto que ARCADIA use estos datos solo para informarme sobre sus actividades. Puedo pedir que los borren cuando quiera.</span>
-          </label>
-
-          <button class="btn" type="submit">Apuntarme</button>
-          <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
-        </form>
-      </div>
-
-      <div class="faq">
-        <h2>Preguntas frecuentes</h2>
-        <details>
-          <summary>¿Es gratis de verdad?</summary>
-          <p>Sí. No pagas entrada ni por jugar. El acceso se gana participando.</p>
-        </details>
-        <details>
-          <summary>¿Qué edad hay que tener?</summary>
-          <p>Entre 16 y 30 años. Si tienes 16 o 17, necesitas una autorización firmada por tu familia.</p>
-        </details>
-        <details>
-          <summary>¿Tengo que saber programar o hacer deporte?</summary>
-          <p>No. Los retos son para todos los niveles.</p>
-        </details>
-        <details>
-          <summary>¿Me van a grabar?</summary>
-          <p>Puede que grabemos clips de la tarde, pero solo usamos imágenes de quien ha dado su permiso.</p>
-        </details>
-      </div>
+    <!-- PREGUNTAS -->
+    <section class="section faq" id="preguntas">
+      <h2>Preguntas frecuentes</h2>
+      <details>
+        <summary>¿Es gratis de verdad?</summary>
+        <p>Sí. No se paga entrada ni por jugar. El acceso se gana participando.</p>
+      </details>
+      <details>
+        <summary>¿Qué edad hay que tener?</summary>
+        <p>ARCADIA es para jóvenes de 16 a 30 años.</p>
+      </details>
+      <details>
+        <summary>¿Hay que saber programar o hacer deporte?</summary>
+        <p>No. Los retos son para todos los niveles.</p>
+      </details>
+      <details>
+        <summary>¿Cuándo empieza?</summary>
+        <p>Estamos preparando las primeras actividades. Las anunciaremos aquí y en nuestras redes.</p>
+      </details>
     </section>
   </main>
 
