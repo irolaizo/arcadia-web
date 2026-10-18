@@ -1,12 +1,12 @@
 # ARCADIA · web
 
-Web explicativa de una sola página de ARCADIA: ocio gaming activo y gratuito para jóvenes de 16 a 30 años en Bizkaia.
+Web interactiva de una sola página que presenta ARCADIA, un proyecto de centro gratuito de gaming, bienestar y creación tecnológica para jóvenes de 16 a 30 años en Bizkaia. Explica lo que ARCADIA quiere llegar a ser y sirve para presentar el proyecto a posibles aliados.
 
 ## Archivos
 
 - `index.html`: todo el contenido (textos, secciones y formulario).
 - `styles.css`: colores, tipografías y diseño.
-- `main.js`: el pasaporte interactivo del inicio.
+- `main.js`: las partes interactivas (pasaporte, mapa del centro, simulador de XP y pestañas).
 
 ## Publicarla gratis con GitHub Pages
 

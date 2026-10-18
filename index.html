@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ARCADIA · Entra a jugar. Quédate a crear.</title>
-  <meta name="description" content="ARCADIA es ocio gaming gratuito para jóvenes de 16 a 30 años en Bizkaia: el acceso a los videojuegos se gana moviéndote, colaborando y enseñando a otros.">
+  <meta name="description" content="ARCADIA es un proyecto para crear en Bizkaia el primer centro gratuito donde jóvenes de 16 a 30 años juegan en equipos de alto nivel ganándose el acceso con deporte, colaboración y enseñando a otros.">
   <meta property="og:title" content="ARCADIA · Entra a jugar. Quédate a crear.">
-  <meta property="og:description" content="Ocio gaming gratuito y activo para jóvenes de 16 a 30 años en Bizkaia.">
+  <meta property="og:description" content="Un centro gratuito de gaming, bienestar y creación tecnológica para jóvenes de 16 a 30 años en Bizkaia. Proyecto en desarrollo.">
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#2B2FD9">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232B2FD9'/%3E%3Cpath d='M32 12 50 52H40l-3.5-8h-9L24 52H14Zm0 16-3 9h6Z' fill='%23FFCF33'/%3E%3C/svg%3E">
@@ -22,93 +22,274 @@
     <a class="brand" href="#inicio" aria-label="ARCADIA, inicio">ARCADIA</a>
     <nav aria-label="Principal">
       <ul>
-        <li><a href="#como-funciona">Cómo funciona</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#quien">Quién está detrás</a></li>
-        <li><a href="#preguntas">Preguntas</a></li>
+        <li><a href="#idea">La idea</a></li>
+        <li><a href="#centro">El centro</a></li>
+        <li><a href="#xp">Niveles</a></li>
+        <li><a href="#comunidad">Comunidad</a></li>
+        <li><a href="#apoya">Apoya el proyecto</a></li>
       </ul>
     </nav>
-    <a class="btn btn-small" href="#colabora">Colabora</a>
   </header>
 
   <main id="contenido">
-    <!-- INICIO -->
+
+    <!-- HERO -->
     <section class="hero" id="inicio">
       <div class="hero-text">
+        <p class="status"><span class="dot" aria-hidden="true"></span>Proyecto en desarrollo en Bizkaia</p>
         <h1>Entra a jugar. Quédate a crear.</h1>
-        <p class="lede">Espacios gratuitos en Bizkaia donde el acceso a los videojuegos se gana haciendo deporte, colaborando y enseñando a otros. Para jóvenes de 16 a 30 años.</p>
+        <p class="lede">ARCADIA quiere ser el primer centro de Euskadi donde jóvenes de 16 a 30 años juegan gratis en equipos de alto nivel. La entrada no se paga: se gana moviéndote, colaborando y enseñando a otros.</p>
         <div class="actions">
-          <a class="btn" href="#como-funciona">Descubre cómo funciona</a>
-          <a class="btn btn-ghost" href="#colabora">Colabora con ARCADIA</a>
+          <a class="btn" href="#centro">Recorre el centro</a>
+          <a class="btn btn-ghost" href="#apoya">Cómo apoyar el proyecto</a>
         </div>
-        <p class="free">Aquí nadie paga. Ni entrada, ni equipos, ni partidas.</p>
       </div>
 
       <div class="passport" id="pasaporte">
         <div class="passport-head">
           <span>Pasaporte ARCADIA</span>
-          <span class="level" aria-live="polite">Nivel <b id="lvl">1</b></span>
+          <span class="level" aria-live="polite"><span id="rankname">Iniciado</span></span>
         </div>
-        <p class="passport-hint" id="hint">Consigue los tres sellos para desbloquear las consolas.</p>
+        <p class="passport-hint" id="hint">Tu primera semana: completa las tres misiones para desbloquear la planta de arriba.</p>
         <ul class="stamps">
-          <li><button class="stamp" type="button" data-xp="40" aria-pressed="false"><span class="stamp-ink">Muévete</span><span class="stamp-task">Un reto físico</span></button></li>
-          <li><button class="stamp" type="button" data-xp="30" aria-pressed="false"><span class="stamp-ink">Colabora</span><span class="stamp-task">Juega con gente nueva</span></button></li>
-          <li><button class="stamp" type="button" data-xp="30" aria-pressed="false"><span class="stamp-ink">Enseña</span><span class="stamp-task">Ayuda a alguien a pasar un nivel</span></button></li>
+          <li><button class="stamp" type="button" aria-pressed="false"><span class="stamp-ink">Identidad</span><span class="stamp-task">Rellena tu ficha de personaje</span></button></li>
+          <li><button class="stamp" type="button" aria-pressed="false"><span class="stamp-ink">Salud</span><span class="stamp-task">15 min de circuito físico</span></button></li>
+          <li><button class="stamp" type="button" aria-pressed="false"><span class="stamp-ink">Social</span><span class="stamp-task">Juega con dos personas nuevas</span></button></li>
         </ul>
         <div class="xp">
-          <div class="xp-bar" role="progressbar" aria-label="Experiencia" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="xpfill"></span></div>
-          <span class="xp-num"><b id="xp">0</b>/100 XP</span>
+          <div class="xp-bar" role="progressbar" aria-label="Progreso del tutorial" aria-valuemin="0" aria-valuemax="3" aria-valuenow="0"><span id="tutfill"></span></div>
+          <span class="xp-num"><b id="tutnum">0</b>/3 misiones</span>
         </div>
-        <div class="unlock" id="unlock" hidden>
-          <strong>Consolas desbloqueadas.</strong> Así funciona ARCADIA.
+        <div class="unlock" id="unlock" hidden></div>
+        <p class="try">Pulsa los sellos para probarlo.</p>
+      </div>
+    </section>
+
+    <!-- PROBLEMA -->
+    <section class="problem">
+      <div class="problem-in">
+        <h2>Miles de jóvenes juegan cada día. Casi siempre solos, sentados y sin que eso les lleve a ningún sitio.</h2>
+        <div class="pains">
+          <div>
+            <h3>Faltan sitios</h3>
+            <p>Más allá de bares, ocio nocturno o deporte tradicional, en Bizkaia no hay espacios pensados para los intereses digitales de esta generación.</p>
+          </div>
+          <div>
+            <h3>Aislamiento y sedentarismo</h3>
+            <p>El videojuego se vive en casa, en solitario y durante horas, sin movimiento ni contacto con otras personas.</p>
+          </div>
+          <div>
+            <h3>Talento que se pierde</h3>
+            <p>Las empresas tecnológicas de Euskadi necesitan perfiles junior creativos, y la escuela tradicional no conecta con la pasión de estos jóvenes.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- POR QUÉ -->
-    <section class="why">
-      <p>Queremos transformar el ocio digital pasivo en creación activa. Aspiramos a ser el lugar donde cualquier joven, venga de donde venga, use su pasión por los videojuegos para construir su futuro.</p>
+    <!-- LA IDEA -->
+    <section class="section" id="idea">
+      <h2>La idea</h2>
+      <p class="sub">ARCADIA une dos modelos que ya funcionan fuera de aquí y los adapta a Euskadi.</p>
+      <div class="equation" aria-label="FUZED más TUMO y 42 es igual a ARCADIA">
+        <div class="eq-card">
+          <p class="eq-name">FUZED</p>
+          <p>Centros juveniles de e-sports en Suecia donde, para jugar, primero hay que hacer 15 minutos de deporte.</p>
+        </div>
+        <span class="eq-op" aria-hidden="true">+</span>
+        <div class="eq-card">
+          <p class="eq-name">TUMO y 42</p>
+          <p>Formación tecnológica gratuita donde se aprende entre iguales, sin profesores ni clases magistrales.</p>
+        </div>
+        <span class="eq-op" aria-hidden="true">=</span>
+        <div class="eq-card eq-result">
+          <p class="eq-name">ARCADIA</p>
+          <p>Un centro donde entras por tu pasión por jugar y te quedas por tu pasión por crear: videojuegos, animación, streaming.</p>
+        </div>
+      </div>
+      <p class="better">Y mejorando lo que en Suecia fallaba: más variedad de juegos, menos violencia y mucho más espacio para crear.</p>
     </section>
 
-    <!-- CÓMO FUNCIONA -->
-    <section class="section" id="como-funciona">
-      <h2>Cómo funciona</h2>
-      <ol class="steps">
-        <li>
-          <h3>Entras gratis</h3>
-          <p>Recibes tu pasaporte y empiezas en Nivel 1.</p>
-        </li>
-        <li>
-          <h3>Te mueves y colaboras</h3>
-          <p>Un reto físico, un taller o una partida con gente nueva te dan sellos y XP.</p>
-        </li>
-        <li>
-          <h3>Desbloqueas</h3>
-          <p>Con tu sello accedes a los torneos y a los mejores equipos. Si enseñas u organizas, subes más rápido.</p>
-        </li>
+    <!-- EL CENTRO -->
+    <section class="section centre" id="centro">
+      <h2>Así imaginamos el centro</h2>
+      <p class="sub">Un edificio de dos plantas, modular y diáfano. Pulsa cada zona para descubrirla, y cambia de nivel para ver qué puedes usar.</p>
+
+      <div class="viewas" role="group" aria-label="Ver el centro como">
+        <span>Ver como:</span>
+        <button type="button" class="chip" data-view="1" aria-pressed="true">Nivel 1, recién llegado</button>
+        <button type="button" class="chip" data-view="2" aria-pressed="false">Nivel 2, tutorial completado</button>
+      </div>
+
+      <div class="building">
+        <div class="floors" id="floors" data-view="1">
+          <div class="floor floor-up">
+            <p class="floor-name">Planta superior</p>
+            <div class="zones">
+              <button type="button" class="zone z-arena" data-zone="arena"><span>La Arena</span><small>40 a 80 PCs</small></button>
+              <button type="button" class="zone z-stream" data-zone="stream"><span>Salas de streaming</span><small>Croma verde</small></button>
+              <button type="button" class="zone z-lab" data-zone="lab"><span>Academia</span><small>Talleres entre iguales</small></button>
+            </div>
+            <div class="lock" aria-hidden="true"><span>Bloqueada hasta el Nivel 2</span></div>
+          </div>
+          <div class="floor floor-down">
+            <p class="floor-name">Planta baja</p>
+            <div class="zones">
+              <button type="button" class="zone z-welcome" data-zone="welcome"><span>Bienvenida</span><small>Sin tornos</small></button>
+              <button type="button" class="zone z-agora" data-zone="agora"><span>El Ágora</span><small>Consolas, sofás y juegos de mesa</small></button>
+              <button type="button" class="zone z-move" data-zone="move"><span>Zona activa</span><small>Cintas, bicis, estiramientos</small></button>
+              <button type="button" class="zone z-cafe" data-zone="cafe"><span>Cafetería</span><small>Saludable</small></button>
+            </div>
+          </div>
+        </div>
+
+        <aside class="zone-info" id="zoneinfo" aria-live="polite">
+          <p class="zi-floor" id="zi-floor">Planta baja</p>
+          <h3 id="zi-title">El Ágora</h3>
+          <p id="zi-text">El corazón social de ARCADIA. Sofás, consolas casuales y juegos de mesa para pasar la tarde, conocer gente y sentirte en un sitio seguro sin tener que consumir nada.</p>
+          <p class="zi-access" id="zi-access">Abierta desde el Nivel 1</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SIMULADOR XP -->
+    <section class="section sim-section" id="xp">
+      <h2>Aquí el nivel se gana, no se compra</h2>
+      <p class="sub">Las acciones pasivas dan poca experiencia. Crear y ayudar a la comunidad dan mucha. Prueba a subir de rango.</p>
+
+      <div class="sim">
+        <div class="sim-actions">
+          <p class="sim-label">Gana XP</p>
+          <button type="button" class="act" data-xp="10" data-msg="Calentamiento hecho antes de jugar."><span>Calentar antes de jugar</span><b>+10</b></button>
+          <button type="button" class="act" data-xp="25" data-msg="Te has apuntado al taller de otra persona."><span>Participar en un torneo o taller</span><b>+25</b></button>
+          <button type="button" class="act" data-xp="50" data-msg="Has ayudado a alguien a resolver un problema."><span>Ayudar a otra persona</span><b>+50</b></button>
+          <button type="button" class="act" data-xp="100" data-msg="Has enseñado una hora de Python. Tu alumno lo confirma escaneando tu QR."><span>Enseñar una habilidad tecnológica</span><b>+100</b></button>
+          <button type="button" class="act" data-xp="200" data-msg="Has organizado un torneo para la comunidad."><span>Organizar un torneo</span><b>+200</b></button>
+
+          <p class="sim-label">Canjea XP</p>
+          <button type="button" class="act spend" data-cost="50" data-msg="Snack saludable canjeado en la cafetería."><span>Un snack o bebida</span><b>−50</b></button>
+          <button type="button" class="act spend" data-cost="300" data-msg="Sala de streaming reservada durante 2 horas."><span>2 horas en la sala de streaming</span><b>−300</b></button>
+
+          <button type="button" class="cheat" id="cheat">Fingir una clase con un amigo para farmear XP</button>
+        </div>
+
+        <div class="sim-board">
+          <div class="sim-stats">
+            <div><p class="stat-n" id="s-total">0</p><p class="stat-l">XP acumulada</p></div>
+            <div><p class="stat-n" id="s-wallet">0</p><p class="stat-l">XP para canjear</p></div>
+          </div>
+          <ol class="ranks" id="ranks">
+            <li data-min="-1"><b>Iniciado</b><span>Al entrar. Acceso a la planta baja.</span></li>
+            <li data-min="0" class="on"><b>Explorador</b><span>Tutorial completado. Acceso a la Arena.</span></li>
+            <li data-min="500"><b>Veterano</b><span>500 XP. Reservas tu setup favorito con antelación.</span></li>
+            <li data-min="3000"><b>Mentor</b><span>3.000 XP. Propones eventos, votas en la asamblea y eres el primer perfil que ven las empresas aliadas.</span></li>
+          </ol>
+          <div class="next">
+            <div class="xp-bar light" role="progressbar" aria-label="Progreso al siguiente rango" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="nextfill"></span></div>
+            <p id="nexttext">Te faltan 500 XP para Veterano.</p>
+          </div>
+          <p class="log" id="log" aria-live="polite">Empiezas como Explorador, con el tutorial ya hecho.</p>
+        </div>
+      </div>
+      <p class="pact"><strong>El pacto de honor.</strong> Inspirado en el <em>tillit</em> sueco, la confianza: la propia comunidad valida las acciones escaneando un QR entre usuarios, sin vigilantes. Quien hace trampa no recibe una bronca: vuelve automáticamente al Nivel 1.</p>
+    </section>
+
+    <!-- COMUNIDAD -->
+    <section class="section" id="comunidad">
+      <h2>Tres motivos para entrar, una sola comunidad</h2>
+      <p class="sub">Cada persona llega por algo distinto. La magia está en que se necesitan entre sí.</p>
+
+      <div class="tabs" role="tablist" aria-label="Perfiles">
+        <button role="tab" id="t-leo" aria-controls="p-leo" aria-selected="true" class="tab">Leo, 19</button>
+        <button role="tab" id="t-ane" aria-controls="p-ane" aria-selected="false" class="tab" tabindex="-1">Ane, 23</button>
+        <button role="tab" id="t-nerea" aria-controls="p-nerea" aria-selected="false" class="tab" tabindex="-1">Nerea, 26</button>
+      </div>
+
+      <article class="persona" role="tabpanel" id="p-leo" aria-labelledby="t-leo">
+        <p class="p-type">El gamer competitivo. Viene por los equipos.</p>
+        <div class="p-grid">
+          <div><h3>Ahora</h3><p>Pasa cinco horas al día jugando solo en su cuarto. Sueña con un setup profesional, le duele la espalda y le cuesta socializar fuera de Discord.</p></div>
+          <div><h3>En ARCADIA</h3><p>Entra por la Arena. Acepta el calentamiento de 15 minutos y descubre que mejora sus reflejos. Para mantener su rango organiza torneos: pasa de jugar solo a liderar un equipo en la vida real.</p></div>
+        </div>
+        <p class="p-xp">Organiza un torneo de Valorant <b>+200 XP</b></p>
+      </article>
+
+      <article class="persona" role="tabpanel" id="p-ane" aria-labelledby="t-ane" hidden>
+        <p class="p-type">La creadora. Viene por la tecnología.</p>
+        <div class="p-grid">
+          <div><h3>Ahora</h3><p>Le interesa más cómo se hacen los videojuegos que jugarlos. Intenta aprender Blender con vídeos de YouTube, pero se atasca sola y no tiene un ordenador potente ni red de contactos.</p></div>
+          <div><h3>En ARCADIA</h3><p>Es el motor de la Academia. Usa los equipos para crear y gana experiencia enseñando diseño y edición a otras personas. Ella diseña los logos de los torneos de Leo.</p></div>
+        </div>
+        <p class="p-xp">Da un taller exprés de Blender a tres compañeros <b>+100 XP</b></p>
+      </article>
+
+      <article class="persona" role="tabpanel" id="p-nerea" aria-labelledby="t-nerea" hidden>
+        <p class="p-type">La buscadora de comunidad. Viene por la gente.</p>
+        <div class="p-grid">
+          <div><h3>Ahora</h3><p>Juega a Just Dance, Mario Kart o Catan. Busca un tercer lugar que no sea ni casa ni trabajo, sin alcohol y sin el ambiente masculinizado y tóxico de muchos espacios gaming.</p></div>
+          <div><h3>En ARCADIA</h3><p>Es el alma de la planta baja. Propone partidas cooperativas, integra a quien llega con timidez y ayuda a los recién llegados a completar su tutorial.</p></div>
+        </div>
+        <p class="p-xp">Ayuda a un Nivel 1 a terminar su tutorial <b>+50 XP</b></p>
+      </article>
+
+      <p class="symbiosis">Leo necesita el diseño de Ane para el logo de su equipo. Ane necesita a Leo para probar el videojuego que está programando. Y los dos van a la charla sobre uso responsable de redes que organiza Nerea. Así un local con ordenadores se convierte en una comunidad.</p>
+    </section>
+
+    <!-- VALORES -->
+    <section class="values">
+      <div class="values-in">
+        <h2>Lo que no se negocia</h2>
+        <dl>
+          <div><dt>Se aprende entre iguales</dt><dd>El conocimiento no se imparte, se comparte. Sin jerarquías: quien sabe, enseña.</dd></div>
+          <div><dt>Primero, el cuerpo</dt><dd>El bienestar físico va antes que la pantalla. Moverse y descansar son parte de la experiencia.</dd></div>
+          <div><dt>Un espacio que se adapta</dt><dd>Mobiliario modular y libertad total: el espacio se adapta a la idea, no al revés.</dd></div>
+          <div><dt>Tolerancia cero</dt><dd>Pertenecer se gana, no se compra. Ni violencia, ni toxicidad, ni trampas.</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- APOYA -->
+    <section class="section support" id="apoya">
+      <h2>Gratis para los jóvenes. Financiado por quien gana con su impacto.</h2>
+      <p class="sub">ARCADIA no cobra nada a quien lo usa. Cada aliado aporta lo que tiene y recibe algo a cambio. Elige tu perfil:</p>
+
+      <div class="allies" role="tablist" aria-label="Tipo de aliado">
+        <button role="tab" class="ally" aria-selected="true" aria-controls="ally-panel" data-ally="ayto">Ayuntamiento o Diputación</button>
+        <button role="tab" class="ally" aria-selected="false" aria-controls="ally-panel" data-ally="fund" tabindex="-1">Fundación</button>
+        <button role="tab" class="ally" aria-selected="false" aria-controls="ally-panel" data-ally="marca" tabindex="-1">Marca tecnológica</button>
+        <button role="tab" class="ally" aria-selected="false" aria-controls="ally-panel" data-ally="empresa" tabindex="-1">Empresa que contrata talento</button>
+      </div>
+
+      <div class="deal" id="ally-panel" role="tabpanel" aria-live="polite">
+        <div class="deal-side">
+          <p class="deal-l">Aporta</p>
+          <p class="deal-t" id="deal-give">Un espacio municipal o industrial sin uso.</p>
+        </div>
+        <span class="deal-arrow" aria-hidden="true"></span>
+        <div class="deal-side">
+          <p class="deal-l">Recibe</p>
+          <p class="deal-t" id="deal-get">Un centro juvenil de vanguardia que saca a los jóvenes de casa y de la calle, y les da formación.</p>
+        </div>
+      </div>
+
+      <div class="ods">
+        <p>ARCADIA contribuye a tres Objetivos de Desarrollo Sostenible:</p>
+        <ul>
+          <li><b>ODS 3</b> Salud y bienestar</li>
+          <li><b>ODS 4</b> Educación de calidad</li>
+          <li><b>ODS 10</b> Reducción de las desigualdades</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- HOJA DE RUTA -->
+    <section class="section road">
+      <h2>El camino</h2>
+      <ol class="roadmap">
+        <li class="now"><p class="r-tag">Ahora</p><h3>La idea toma forma</h3><p>Definimos el modelo, buscamos aliados y preparamos la validación.</p></li>
+        <li><p class="r-tag">Siguiente</p><h3>Pop-ups de prueba</h3><p>Eventos de un día en espacios juveniles de Bizkaia para comprobar que el sistema de sellos y XP funciona con jóvenes reales.</p></li>
+        <li><p class="r-tag">Después</p><h3>El Pasaporte digital</h3><p>Una app con códigos QR en cada zona y validación entre usuarios.</p></li>
+        <li><p class="r-tag">La meta</p><h3>Centro ARCADIA</h3><p>El primer centro permanente en Bizkaia.</p></li>
       </ol>
-    </section>
-
-    <!-- PROYECTOS -->
-    <section class="section" id="proyectos">
-      <h2>Proyectos</h2>
-      <div class="projects">
-        <article class="project">
-          <h3>Pop-up ARCADIA</h3>
-          <p>Eventos gratuitos de un día en espacios juveniles de Bizkaia para probar el modelo: primero un reto físico o un taller, después torneos.</p>
-          <p class="for">Para jóvenes de 16 a 30 años</p>
-        </article>
-        <article class="project">
-          <h3>Pasaporte ARCADIA</h3>
-          <p>Sistema de niveles: el acceso a los equipos se gana participando, nunca pagando.</p>
-          <p class="for">Para quien participa en ARCADIA</p>
-        </article>
-        <article class="project project-soon">
-          <h3>Centro ARCADIA <span class="soon">Próximamente</span></h3>
-          <p>El primer centro permanente, con consolas, ordenadores de alto rendimiento y salas de streaming.</p>
-          <p class="for">Para jóvenes de Bizkaia</p>
-        </article>
-      </div>
     </section>
 
     <!-- QUIÉN -->
@@ -118,63 +299,22 @@
         <div class="who-id">
           <p class="who-name">Iratxe Olaizola</p>
           <p class="who-role">Fundadora</p>
-          <p>Graduada en Periodismo, Publicidad y RR. PP. y con un máster en Comunicación Social (UPV/EHU). Ayudó a montar desde cero un centro juvenil de e-sports en Borås (Suecia) y organizó una Game Jam con IA para jóvenes.</p>
+          <p>Graduada en Periodismo, Publicidad y RR. PP. y con un máster en Comunicación Social (UPV/EHU). Ayudó a montar desde cero un centro juvenil de e-sports en Borås (Suecia), organizó una Game Jam con IA para jóvenes y estudió dos años en 42 Urduliz.</p>
         </div>
         <div class="who-story">
           <blockquote>
             <p>Durante un año de voluntariado en Suecia ayudé a montar desde cero un centro de ocio para jóvenes. Allí, para jugar a videojuegos, primero había que hacer 15 minutos de deporte. Funcionaba.</p>
-            <p>Al volver me di cuenta de que en España no existe nada parecido, y decidí crearlo, mejorando lo que allí fallaba: más variedad de juegos, menos violencia y más espacio para crear.</p>
+            <p>Al volver me di cuenta de que en España no existe nada parecido, y decidí crearlo.</p>
           </blockquote>
-          <p class="brings"><strong>Lo que aporto:</strong> experiencia creando comunidades jóvenes y sus redes sociales desde cero, organización de eventos gaming con patrocinadores, y base técnica tras dos años en 42 Urduliz y una certificación en IA para community managers.</p>
+          <p class="quote-sig">«En ARCADIA todos somos suecos»</p>
         </div>
       </div>
-    </section>
-
-    <!-- COLABORA -->
-    <section class="section collab" id="colabora">
-      <h2>Colabora con ARCADIA</h2>
-      <p class="sub">Acoge un pop-up, cede un espacio o hazte empresa partner. Esto es lo que gana cada uno:</p>
-      <dl class="gains">
-        <div>
-          <dt>Gaztelekus y ayuntamientos</dt>
-          <dd>Una tarde dinamizada gratis, nuevos jóvenes en sus espacios y datos de participación.</dd>
-        </div>
-        <div>
-          <dt>Empresas tecnológicas</dt>
-          <dd>Contacto con jóvenes que programan, diseñan y crean contenido.</dd>
-        </div>
-        <div>
-          <dt>Marcas</dt>
-          <dd>Visibilidad directa ante la Generación Z en un entorno sano.</dd>
-        </div>
-      </dl>
-    </section>
-
-    <!-- PREGUNTAS -->
-    <section class="section faq" id="preguntas">
-      <h2>Preguntas frecuentes</h2>
-      <details>
-        <summary>¿Es gratis de verdad?</summary>
-        <p>Sí. No se paga entrada ni por jugar. El acceso se gana participando.</p>
-      </details>
-      <details>
-        <summary>¿Qué edad hay que tener?</summary>
-        <p>ARCADIA es para jóvenes de 16 a 30 años.</p>
-      </details>
-      <details>
-        <summary>¿Hay que saber programar o hacer deporte?</summary>
-        <p>No. Los retos son para todos los niveles.</p>
-      </details>
-      <details>
-        <summary>¿Cuándo empieza?</summary>
-        <p>Estamos preparando las primeras actividades. Las anunciaremos aquí y en nuestras redes.</p>
-      </details>
     </section>
   </main>
 
   <footer class="foot">
     <p class="foot-brand">ARCADIA</p>
-    <p>Ocio gaming activo y gratuito en Bizkaia.</p>
+    <p>Un proyecto de ocio gaming activo y gratuito para Bizkaia.</p>
     <!-- Cuando tengas email y redes, sustituye este párrafo por los enlaces -->
     <p class="foot-soon">Email, Instagram y TikTok muy pronto.</p>
   </footer>
