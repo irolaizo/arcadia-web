@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ARCADIA · Entra a jugar. Quédate a crear.</title>
+  <meta name="description" content="ARCADIA es ocio gaming gratuito para jóvenes de 16 a 30 años en Bizkaia: el acceso a los videojuegos se gana moviéndote, colaborando y enseñando a otros.">
+  <meta property="og:title" content="ARCADIA · Entra a jugar. Quédate a crear.">
+  <meta property="og:description" content="Ocio gaming gratuito y activo para jóvenes de 16 a 30 años en Bizkaia.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#2B2FD9">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232B2FD9'/%3E%3Cpath d='M32 12 50 52H40l-3.5-8h-9L24 52H14Zm0 16-3 9h6Z' fill='%23FFCF33'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Unbounded:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <header class="top">
+    <a class="brand" href="#inicio" aria-label="ARCADIA, inicio">ARCADIA</a>
+    <nav aria-label="Principal">
+      <ul>
+        <li><a href="#como-funciona">Cómo funciona</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#quien">Quién está detrás</a></li>
+        <li><a href="#colabora">Colabora</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-small" href="#apuntate">Apúntate</a>
+  </header>
+
+  <main id="contenido">
+    <!-- INICIO -->
+    <section class="hero" id="inicio">
+      <div class="hero-text">
+        <h1>Entra a jugar. Quédate a crear.</h1>
+        <p class="lede">Espacios gratuitos en Bizkaia donde el acceso a los videojuegos se gana haciendo deporte, colaborando y enseñando a otros. Para jóvenes de 16 a 30 años.</p>
+        <div class="actions">
+          <a class="btn" href="#apuntate">Apúntate al próximo pop-up</a>
+          <a class="btn btn-ghost" href="#colabora">Colabora con ARCADIA</a>
+        </div>
+        <p class="free">Aquí nadie paga. Ni entrada, ni equipos, ni partidas.</p>
+      </div>
+
+      <div class="passport" id="pasaporte">
+        <div class="passport-head">
+          <span>Pasaporte ARCADIA</span>
+          <span class="level" aria-live="polite">Nivel <b id="lvl">1</b></span>
+        </div>
+        <p class="passport-hint" id="hint">Consigue los tres sellos para desbloquear las consolas.</p>
+        <ul class="stamps">
+          <li><button class="stamp" type="button" data-xp="40" aria-pressed="false"><span class="stamp-ink">Muévete</span><span class="stamp-task">Un reto físico</span></button></li>
+          <li><button class="stamp" type="button" data-xp="30" aria-pressed="false"><span class="stamp-ink">Colabora</span><span class="stamp-task">Juega con gente nueva</span></button></li>
+          <li><button class="stamp" type="button" data-xp="30" aria-pressed="false"><span class="stamp-ink">Enseña</span><span class="stamp-task">Ayuda a alguien a pasar un nivel</span></button></li>
+        </ul>
+        <div class="xp">
+          <div class="xp-bar" role="progressbar" aria-label="Experiencia" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="xpfill"></span></div>
+          <span class="xp-num"><b id="xp">0</b>/100 XP</span>
+        </div>
+        <div class="unlock" id="unlock" hidden>
+          <strong>Consolas desbloqueadas.</strong> Así funciona cada tarde de ARCADIA.
+        </div>
+      </div>
+    </section>
+
+    <!-- POR QUÉ -->
+    <section class="why">
+      <p>Queremos transformar el ocio digital pasivo en creación activa. Aspiramos a ser el lugar donde cualquier joven, venga de donde venga, use su pasión por los videojuegos para construir su futuro.</p>
+    </section>
+
+    <!-- CÓMO FUNCIONA -->
+    <section class="section" id="como-funciona">
+      <h2>Cómo funciona</h2>
+      <ol class="steps">
+        <li>
+          <h3>Entras gratis</h3>
+          <p>Recibes tu pasaporte y empiezas en Nivel 1.</p>
+        </li>
+        <li>
+          <h3>Te mueves y colaboras</h3>
+          <p>Un reto físico, un taller o una partida con gente nueva te dan sellos y XP.</p>
+        </li>
+        <li>
+          <h3>Desbloqueas</h3>
+          <p>Con tu sello accedes a los torneos y a los mejores equipos. Si enseñas u organizas, subes más rápido.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- UNA TARDE -->
+    <section class="section afternoon" id="pop-up">
+      <h2>Así es una tarde de pop-up</h2>
+      <p class="sub">Cuatro horas en un Gazteleku de Bizkaia.</p>
+      <ol class="timeline">
+        <li>
+          <span class="time">45 min</span>
+          <div>
+            <h3>El peaje</h3>
+            <p>Las consolas están bloqueadas. Para conseguir tu primer sello eliges entre un reto físico, como Just Dance o un circuito de reflejos, o un taller exprés de código o ciberseguridad.</p>
+          </div>
+        </li>
+        <li>
+          <span class="time">3 h</span>
+          <div>
+            <h3>El desbloqueo</h3>
+            <p>Con el sello entras a la zona de juego: torneos de Smash Bros, Brawl Stars o FIFA.</p>
+          </div>
+        </li>
+        <li>
+          <span class="time">Bonus</span>
+          <div>
+            <h3>El multiplicador</h3>
+            <p>Si organizas los emparejamientos o enseñas a alguien a pasarse un nivel, consigues trato VIP: eliges el siguiente juego, te saltas la cola o te llevas un snack.</p>
+          </div>
+        </li>
+      </ol>
+      <p class="bring">Trae tu móvil o portátil si quieres. El resto lo ponemos nosotros.</p>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section class="section" id="proyectos">
+      <h2>Proyectos</h2>
+      <div class="projects">
+        <article class="project">
+          <h3>Pop-up ARCADIA</h3>
+          <p>Una tarde gratuita en un Gazteleku: primero un reto físico o un taller, después torneos.</p>
+          <p class="for">Para jóvenes de 16 a 30 años</p>
+        </article>
+        <article class="project">
+          <h3>Pasaporte ARCADIA</h3>
+          <p>Sistema de niveles: el acceso a los equipos se gana participando, nunca pagando.</p>
+          <p class="for">Para quien participa en ARCADIA</p>
+        </article>
+        <article class="project project-soon">
+          <h3>Centro ARCADIA <span class="soon">Próximamente</span></h3>
+          <p>El primer centro permanente, con consolas, ordenadores de alto rendimiento y salas de streaming.</p>
+          <p class="for">Para jóvenes de Bizkaia</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- QUIÉN -->
+    <section class="section who" id="quien">
+      <h2>Quién está detrás</h2>
+      <div class="who-grid">
+        <div class="who-id">
+          <p class="who-name">Iratxe Olaizola</p>
+          <p class="who-role">Fundadora</p>
+          <p>Graduada en Periodismo, Publicidad y RR. PP. y con un máster en Comunicación Social (UPV/EHU). Ayudó a montar desde cero un centro juvenil de e-sports en Borås (Suecia) y organizó una Game Jam con IA para jóvenes.</p>
+        </div>
+        <div class="who-story">
+          <blockquote>
+            <p>Durante un año de voluntariado en Suecia ayudé a montar desde cero un centro de ocio para jóvenes. Allí, para jugar a videojuegos, primero había que hacer 15 minutos de deporte. Funcionaba.</p>
+            <p>Al volver me di cuenta de que en España no existe nada parecido, y decidí crearlo, mejorando lo que allí fallaba: más variedad de juegos, menos violencia y más espacio para crear.</p>
+          </blockquote>
+          <p class="brings"><strong>Lo que aporto:</strong> experiencia creando comunidades jóvenes y sus redes sociales desde cero, organización de eventos gaming con patrocinadores, y base técnica tras dos años en 42 Urduliz y una certificación en IA para community managers.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLABORA -->
+    <section class="section collab" id="colabora">
+      <h2>Colabora con ARCADIA</h2>
+      <p class="sub">Acoge un pop-up, cede un espacio o hazte empresa partner. Esto es lo que gana cada uno:</p>
+      <dl class="gains">
+        <div>
+          <dt>Gaztelekus y ayuntamientos</dt>
+          <dd>Una tarde dinamizada gratis, nuevos jóvenes en sus espacios y datos de participación.</dd>
+        </div>
+        <div>
+          <dt>Empresas tecnológicas</dt>
+          <dd>Contacto con jóvenes que programan, diseñan y crean contenido.</dd>
+        </div>
+        <div>
+          <dt>Marcas</dt>
+          <dd>Visibilidad directa ante la Generación Z en un entorno sano.</dd>
+        </div>
+      </dl>
+      <a class="btn btn-light" href="#apuntate" data-tipo="colaborar">Hablemos</a>
+    </section>
+
+    <!-- APÚNTATE + FAQ -->
+    <section class="section signup" id="apuntate">
+      <div class="signup-form">
+        <h2>Apúntate al próximo pop-up</h2>
+        <p class="sub">Será en un Gazteleku de Bizkaia. Lugar y fecha por confirmar: te avisamos por email en cuanto los tengamos.</p>
+
+        <form id="form" novalidate>
+          <fieldset class="tipo">
+            <legend>Quiero</legend>
+            <label><input type="radio" name="tipo" value="joven" checked> Venir a jugar</label>
+            <label><input type="radio" name="tipo" value="colaborar"> Colaborar como entidad o empresa</label>
+          </fieldset>
+
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" autocomplete="name" required>
+          </div>
+
+          <div class="field" data-only="joven">
+            <label for="edad">Edad</label>
+            <input id="edad" name="edad" type="number" inputmode="numeric" min="16" max="30" required>
+          </div>
+
+          <div class="field" data-only="colaborar" hidden>
+            <label for="entidad">Entidad o empresa</label>
+            <input id="entidad" name="entidad" autocomplete="organization">
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+
+          <div class="field" id="tutor-field" hidden>
+            <label for="tutor">Contacto de tu madre, padre o tutor</label>
+            <input id="tutor" name="tutor" placeholder="Email o teléfono">
+            <p class="help">Si tienes 16 o 17 años necesitamos una autorización firmada por tu familia.</p>
+          </div>
+
+          <div class="field" data-only="colaborar" hidden>
+            <label for="mensaje">¿Cómo te gustaría colaborar?</label>
+            <textarea id="mensaje" name="mensaje" rows="3"></textarea>
+          </div>
+
+          <label class="check">
+            <input type="checkbox" name="privacidad" required>
+            <span>Acepto que ARCADIA use estos datos solo para informarme sobre sus actividades. Puedo pedir que los borren cuando quiera.</span>
+          </label>
+
+          <button class="btn" type="submit">Apuntarme</button>
+          <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="faq">
+        <h2>Preguntas frecuentes</h2>
+        <details>
+          <summary>¿Es gratis de verdad?</summary>
+          <p>Sí. No pagas entrada ni por jugar. El acceso se gana participando.</p>
+        </details>
+        <details>
+          <summary>¿Qué edad hay que tener?</summary>
+          <p>Entre 16 y 30 años. Si tienes 16 o 17, necesitas una autorización firmada por tu familia.</p>
+        </details>
+        <details>
+          <summary>¿Tengo que saber programar o hacer deporte?</summary>
+          <p>No. Los retos son para todos los niveles.</p>
+        </details>
+        <details>
+          <summary>¿Me van a grabar?</summary>
+          <p>Puede que grabemos clips de la tarde, pero solo usamos imágenes de quien ha dado su permiso.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p class="foot-brand">ARCADIA</p>
+    <p>Ocio gaming activo y gratuito en Bizkaia.</p>
+    <!-- Cuando tengas email y redes, sustituye este párrafo por los enlaces -->
+    <p class="foot-soon">Email, Instagram y TikTok muy pronto.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
